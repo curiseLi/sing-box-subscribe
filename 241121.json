@@ -374,8 +374,6 @@
       "outbounds": [
         "🇹🇼 gcp台湾-GCP-TROJAN",
         "🇹🇼 GCP-台湾-Vless",
-        "🇸🇬 GCP-新加坡-vless",
-        "🇸🇬 GCP-新加坡-Trojan",
         "ygkkk-vm-ws",
         "ygkkk-vl-reality",
         "xiesheng",
@@ -438,43 +436,7 @@
         }
       }
     },
-    {
-      "tag": "🇸🇬 GCP-新加坡-vless",
-      "type": "vless",
-      "server": "gcpxjp.mmc.pp.ua",
-      "server_port": 22404,
-      "uuid": "4a041c23-65e3-49ad-8d50-84059b961dbb",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "gcpxjp.mmc.pp.ua"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/asd2048",
-        "headers": {
-          "Host": "gcpxjp.mmc.pp.ua"
-        }
-      }
-    },
-    {
-      "tag": "🇸🇬 GCP-新加坡-Trojan",
-      "type": "trojan",
-      "server": "gcpxjp.mmc.pp.ua",
-      "server_port": 42747,
-      "password": "TFeMbmiDdy",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
+       {
       "tag": "ygkkk-vm-ws",
       "type": "vmess",
       "server": "104.19.253.88",
@@ -640,7 +602,7 @@
       },
       "path": "/asd2048"
     }
-  }，
+  },
  ],
   "route": {
     "auto_detect_interface": true,
