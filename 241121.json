@@ -384,6 +384,7 @@
         "ceshi",
         "甲骨文2*12",
         "🇹🇼 GCP台湾"
+        "GCP东京-VLESS"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -620,8 +621,27 @@
         "type": "salamander",
         "password": "de96b6a0-cfe6"
       }
+    }，
+    {
+    "tag": "GCP东京-VLESS",
+    "type": "vless",
+    "server": "gcpdj.mmc.pp.ua",
+    "server_port": 18677,
+    "uuid": "d590eb0d-3a12-43d7-b146-93d08f4a92cc",
+    "tls": {
+      "enabled": true,
+      "server_name": "gcpdj.mmc.pp.ua",
+      "insecure": false
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "gcpdj.mmc.pp.ua"
+      },
+      "path": "/asd2048"
     }
-  ],
+  }，
+ ],
   "route": {
     "auto_detect_interface": true,
     "final": "Proxy",
