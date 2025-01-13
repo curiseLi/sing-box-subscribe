@@ -8,7 +8,7 @@
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "secret": "",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_url": "https://ghproxy.cn/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
       "external_ui_download_detour": "direct",
       "default_mode": "rule"
     },
@@ -97,18 +97,22 @@
       "outbounds": [
         "auto",
         "direct",
-        "🇹🇼 gcp台湾-GCP-TROJAN",
-        "🇹🇼 GCP-台湾-Vless",
-        "🇸🇬 GCP-新加坡-vless",
-        "🇸🇬 GCP-新加坡-Trojan",
+        "🇨🇳 GCP-台湾-Vless",
+        "🇨🇳 gcp台湾-GCP-TROJAN-lht",
+        "🇨🇳 GCP台湾",
+        "🇯🇵 GCP东京-VLESS",
+        "🇯🇵 GCP东京-trojan",
         "ygkkk-vm-ws",
-        "ygkkk-vl-reality",
-        "xiesheng",
+        "mna2rz7td",
+        "cc",
         "zhuzz",
         "dj-lht",
         "ceshi",
         "甲骨文2*12",
-        "🇹🇼 GCP台湾"
+        "lht",
+        "lht 2",
+        "lht1",
+        "8dn8q3xar"
       ]
     },
     {
@@ -328,24 +332,24 @@
       "tag": "TaiWan",
       "type": "selector",
       "outbounds": [
-        "🇹🇼 gcp台湾-GCP-TROJAN",
-        "🇹🇼 GCP-台湾-Vless",
-        "🇹🇼 GCP台湾"
+        "🇨🇳 GCP-台湾-Vless",
+        "🇨🇳 gcp台湾-GCP-TROJAN-lht",
+        "🇨🇳 GCP台湾"
       ]
     },
     {
       "tag": "Singapore",
       "type": "selector",
       "outbounds": [
-        "🇸🇬 GCP-新加坡-vless",
-        "🇸🇬 GCP-新加坡-Trojan"
+        "Proxy"
       ]
     },
     {
       "tag": "Japan",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "🇯🇵 GCP东京-VLESS",
+        "🇯🇵 GCP东京-trojan"
       ]
     },
     {
@@ -360,29 +364,38 @@
       "type": "selector",
       "outbounds": [
         "ygkkk-vm-ws",
-        "ygkkk-vl-reality",
-        "xiesheng",
+        "mna2rz7td",
+        "cc",
         "zhuzz",
         "dj-lht",
         "ceshi",
-        "甲骨文2*12"
+        "甲骨文2*12",
+        "lht",
+        "lht 2",
+        "lht1",
+        "8dn8q3xar"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇹🇼 gcp台湾-GCP-TROJAN",
-        "🇹🇼 GCP-台湾-Vless",
+        "🇨🇳 GCP-台湾-Vless",
+        "🇨🇳 gcp台湾-GCP-TROJAN-lht",
+        "🇨🇳 GCP台湾",
+        "🇯🇵 GCP东京-VLESS",
+        "🇯🇵 GCP东京-trojan",
         "ygkkk-vm-ws",
-        "ygkkk-vl-reality",
-        "xiesheng",
+        "mna2rz7td",
+        "cc",
         "zhuzz",
         "dj-lht",
         "ceshi",
         "甲骨文2*12",
-        "🇹🇼 GCP台湾"
-        "GCP东京-VLESS"
+        "lht",
+        "lht 2",
+        "lht1",
+        "8dn8q3xar"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -401,209 +414,278 @@
       "tag": "block"
     },
     {
-      "tag": "🇹🇼 gcp台湾-GCP-TROJAN",
+      "type": "vless",
+      "tag": "🇨🇳 GCP-台湾-Vless",
+      "server": "gcptw.mmc.pp.ua",
+      "server_port": 58975,
+      "uuid": "67a03651-3f84-429f-9f17-b78616e32b54",
+      "transport": {
+        "path": "/tw2048",
+        "type": "ws",
+        "headers": {
+          "Host": "gcptw.mmc.pp.ua"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "gcptw.mmc.pp.ua",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
       "type": "trojan",
+      "tag": "🇨🇳 gcp台湾-GCP-TROJAN-lht",
       "server": "gcptw.mmc.pp.ua",
       "server_port": 56754,
       "password": "ZNIH4Lz5kC",
       "tls": {
         "enabled": true,
-        "insecure": false,
         "server_name": "yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇹🇼 GCP-台湾-Vless",
-      "type": "vless",
-      "server": "gcptw.mmc.pp.ua",
-      "server_port": 58975,
-      "uuid": "67a03651-3f84-429f-9f17-b78616e32b54",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "gcptw.mmc.pp.ua"
+        "insecure": true
       },
-      "transport": {
-        "type": "ws",
-        "path": "/tw2048",
-        "headers": {
-          "Host": "gcptw.mmc.pp.ua"
-        }
-      }
-    },
-       {
-      "tag": "ygkkk-vm-ws",
-      "type": "vmess",
-      "server": "104.19.253.88",
-      "server_port": 2095,
-      "uuid": "67aa550b-adc5-4957-aed8-2f36ccd7fec6",
-      "security": "auto",
-      "alter_id": 0,
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "hy.curiseli.cloudns.org"
-        },
-        "path": "67aa550b-adc5-4957-aed8-2f36ccd7fec6-vm"
-      }
+      "tcp_fast_open": false
     },
     {
-      "tag": "ygkkk-vl-reality",
-      "type": "vless",
-      "server": "141.148.189.48",
-      "server_port": 7661,
-      "uuid": "67aa550b-adc5-4957-aed8-2f36ccd7fec6",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.yahoo.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "VZ-49VcGgOO8pvhV5I_l6EqAAXYMuMpafrwPJWMqXQ8",
-          "short_id": "00dadcc5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "xiesheng",
-      "type": "vless",
-      "server": "cc.qian.cloudns.org",
-      "server_port": 15215,
-      "uuid": "d8676459-3e88-497f-8a76-c4fe3f6ec6a6",
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "zhuzz",
-      "type": "vless",
-      "server": "ps.mmc.pp.ua",
-      "server_port": 12882,
-      "uuid": "e596a3ba-ce05-4cef-9013-f21f8239f70a",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "yahoo.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cSbQm19J6knxJmmTD8Ek-5Q8nefW_fxoIz-GdM3BfWM",
-          "short_id": "1b0fef02"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "dj-lht",
-      "type": "vless",
-      "server": "dj.mmc.pp.ua",
-      "server_port": 33290,
-      "uuid": "b65735a5-00f4-437d-9686-66ad14e84114",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "yahoo.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "x5Gmb3SavGBBQyvuYbezGRqqmlOc4Djd1c3-40AxYgc",
-          "short_id": "226fdadf72c3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "ceshi",
       "type": "hysteria2",
-      "server": "dj.mmc.pp.ua",
-      "server_port": 20859,
-      "password": "curise.bb77ef97",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "2bd79d9d-0d39-42d6-a307-f35caabefa8a"
-      }
-    },
-    {
-      "tag": "甲骨文2*12",
-      "type": "hysteria2",
-      "server": "ps.mmc.pp.ua",
-      "server_port": 20899,
-      "password": "curise.cffdcf92",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇹🇼 GCP台湾",
-      "type": "hysteria2",
+      "tag": "🇨🇳 GCP台湾",
       "server": "gcptw.mmc.pp.ua",
       "server_port": 20899,
       "password": "curise.1f71df71",
-      "up_mbps": 10,
-      "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
+        "insecure": true
       },
       "obfs": {
         "type": "salamander",
         "password": "de96b6a0-cfe6"
-      }
-    }，
-    {
-    "tag": "GCP东京-VLESS",
-    "type": "vless",
-    "server": "gcpdj.mmc.pp.ua",
-    "server_port": 18677,
-    "uuid": "d590eb0d-3a12-43d7-b146-93d08f4a92cc",
-    "tls": {
-      "enabled": true,
-      "server_name": "gcpdj.mmc.pp.ua",
-      "insecure": false
-    },
-    "transport": {
-      "type": "ws",
-      "headers": {
-        "Host": "gcpdj.mmc.pp.ua"
       },
-      "path": "/asd2048"
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 GCP东京-VLESS",
+      "server": "gcpdj.mmc.pp.ua",
+      "server_port": 18677,
+      "uuid": "d590eb0d-3a12-43d7-b146-93d08f4a92cc",
+      "transport": {
+        "path": "/asd2048",
+        "type": "ws",
+        "headers": {
+          "Host": "gcpdj.mmc.pp.ua"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "gcpdj.mmc.pp.ua",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 GCP东京-trojan",
+      "server": "gcpdj.mmc.pp.ua",
+      "server_port": 13872,
+      "password": "r8lGrG0m1t",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vmess",
+      "tag": "ygkkk-vm-ws",
+      "server": "104.16.126.8",
+      "server_port": 2095,
+      "uuid": "67aa550b-adc5-4957-aed8-2f36ccd7fec6",
+      "alter_id": 0,
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "67aa550b-adc5-4957-aed8-2f36ccd7fec6-vm",
+        "headers": {
+          "Host": "hy.curiseli.cloudns.org"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "mna2rz7td",
+      "server": "129.153.217.166",
+      "server_port": 15215,
+      "uuid": "dc6c08ec-1500-4f8d-8c6a-aa4632323059",
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "cc",
+      "server": "cc.mmc.pp.ua",
+      "server_port": 26946,
+      "uuid": "97c62bf5-aebf-48ba-ca7a-892b62d8d0ba",
+      "transport": {
+        "path": "/asdasd",
+        "type": "ws",
+        "headers": {
+          "Host": "cc.mmc.pp.ua"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "cc.mmc.pp.ua",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "zhuzz",
+      "server": "ps.mmc.pp.ua",
+      "server_port": 12882,
+      "uuid": "e596a3ba-ce05-4cef-9013-f21f8239f70a",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cSbQm19J6knxJmmTD8Ek-5Q8nefW_fxoIz-GdM3BfWM",
+          "short_id": "1b0fef02"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "dj-lht",
+      "server": "dj.mmc.pp.ua",
+      "server_port": 33290,
+      "uuid": "b65735a5-00f4-437d-9686-66ad14e84114",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "x5Gmb3SavGBBQyvuYbezGRqqmlOc4Djd1c3-40AxYgc",
+          "short_id": "226fdadf72c3"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ceshi",
+      "server": "dj.mmc.pp.ua",
+      "server_port": 20859,
+      "password": "curise.bb77ef97",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "2bd79d9d-0d39-42d6-a307-f35caabefa8a"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "hysteria2",
+      "tag": "甲骨文2*12",
+      "server": "ps.mmc.pp.ua",
+      "server_port": 20899,
+      "password": "curise.cffdcf92",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "lht",
+      "server": "dj1.mmc.pp.ua",
+      "server_port": 11436,
+      "uuid": "fb35ff4d-bbdb-4d36-9962-5c22f6c17c1d",
+      "transport": {
+        "path": "/mmc1",
+        "type": "ws",
+        "headers": {
+          "Host": "dj1.mmc.pp.ua"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "dj1.mmc.pp.ua",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "lht 2",
+      "server": "xg.cqq.pp.ua",
+      "server_port": 41232,
+      "uuid": "2bf74ba6-e652-49f0-e4f0-199eac096c8d",
+      "transport": {
+        "path": "/zzz",
+        "type": "ws",
+        "headers": {
+          "Host": "xg.cqq.pp.ua"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "xg.cqq.pp.ua",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "lht1",
+      "server": "as.cqq.pp.ua",
+      "server_port": 37047,
+      "uuid": "a0d1223e-9065-4544-b4bc-b08ea255fc1f",
+      "transport": {
+        "path": "/zzz",
+        "type": "ws",
+        "headers": {
+          "Host": "as.cqq.pp.ua"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "as.cqq.pp.ua",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "trojan",
+      "tag": "8dn8q3xar",
+      "server": "xg.cqq.pp.ua",
+      "server_port": 13538,
+      "password": "xEaoFAPSf8",
+      "tls": {
+        "enabled": true,
+        "server_name": "microsoft.com",
+        "insecure": true
+      },
+      "tcp_fast_open": false
     }
-  },
- ],
+  ],
   "route": {
     "auto_detect_interface": true,
     "final": "Proxy",
@@ -750,210 +832,210 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-openai",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Toperlock/sing-box-geosite/main/rule/OpenAI.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/Toperlock/sing-box-geosite/main/rule/OpenAI.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-google",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-google",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-github",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-twitter",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/twitter.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/twitter.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-twitter",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-facebook",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/facebook.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/facebook.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-facebook",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-bilibili",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-bahamut",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bahamut.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bahamut.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-tiktok",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-disney",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-amazon",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-category-games",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-dmm",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/dmm.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/dmm.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-hbo",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-primevideo",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-geolocation-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
         "download_detour": "direct"
       },
       {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
         "download_detour": "direct"
       }
     ]
